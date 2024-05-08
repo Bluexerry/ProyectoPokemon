@@ -1,0 +1,5 @@
+       GENERO
+
+ID: 1, Nombre: Macho
+ID: 2, Nombre: Hembra
+ID: 3, Nombre: NULL

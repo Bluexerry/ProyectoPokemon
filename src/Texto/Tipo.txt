@@ -1,0 +1,21 @@
+        TIPO
+
+ID: 1, Nombre: Bicho
+ID: 2, Nombre: Siniestro
+ID: 3, Nombre: Dragon
+ID: 4, Nombre: Electrico
+ID: 5, Nombre: Hada
+ID: 6, Nombre: Lucha
+ID: 7, Nombre: Fuego
+ID: 8, Nombre: Volador
+ID: 9, Nombre: Fantasma
+ID: 10, Nombre: Planta
+ID: 11, Nombre: Tierra
+ID: 12, Nombre: Hielo
+ID: 13, Nombre: Normal
+ID: 14, Nombre: Veneno
+ID: 15, Nombre: Psiquico
+ID: 16, Nombre: Roca
+ID: 17, Nombre: Acero
+ID: 18, Nombre: Agua
+ID: 19, Nombre: NULL
