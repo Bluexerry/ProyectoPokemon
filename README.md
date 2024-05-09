@@ -1,10 +1,25 @@
 # Nombre del Proyecto
 
-Breve descripción del proyecto aquí. Puedes incluir su propósito, funcionalidades principales y cualquier otra información relevante.
+Esta aplicacion de Java Swing dirigida en IDE Net Beans va dirigida a la recogida de informacion de Pokemon y usuarios para su posterior guardado, eliminacion o edicion de datos. Permite acciones desde un acceso Login con un unico usuario de primer nivel y varios de segundo nivel, registro de usuarios, informacion de datos registrados, creacion de archivos de texto para una mayor valoracion de aplicacion, musica y elementos interactivos, etc.
 
 ## Requisitos Previos
 
-Enumera cualquier software o biblioteca necesaria para ejecutar el proyecto, como Java JDK, NetBeans, etc.
+Requisitos Previos
+Antes de instalar NetBeans, asegúrate de que tu sistema cumple con los siguientes requisitos de hardware:
+
+Procesador: Intel Pentium IV o superior.
+Memoria RAM: Se recomienda al menos 2 GB de RAM.
+Espacio en disco: Al menos 1.5 GB de espacio libre en disco para la instalación básica. Se recomienda más espacio si planeas instalar complementos adicionales.
+Resolución de pantalla: 1024x768 píxeles o superior.
+Instalación de NetBeans
+Para instalar NetBeans, sigue estos pasos:
+
+Visita el sitio web oficial de NetBeans en netbeans.apache.org en tu navegador web.
+Navega hasta la sección de descargas y selecciona la versión de NetBeans que deseas instalar. Selecciona la versión que sea compatible con tu sistema operativo.
+Una vez descargado el instalador, haz doble clic en él para iniciar el proceso de instalación.
+Sigue las instrucciones del instalador para completar la instalación. Asegúrate de seleccionar las opciones adecuadas según tus necesidades, como la ubicación de instalación y los componentes adicionales que deseas incluir.
+Una vez que la instalación esté completa, puedes iniciar NetBeans desde el menú de inicio o desde el acceso directo en tu escritorio, si se creó uno durante la instalación.
+Con NetBeans instalado, puedes abrir el proyecto y comenzar a trabajar en él en tu entorno local.
 
 ## Instalación
 
