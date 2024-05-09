@@ -80,26 +80,87 @@ EleccionUsuario - Similar al anterior, contiene ademas botones interactivos para
 
 Login - Interfaz pricipal del programa, contiene campos interactuables en los que dar el nombre y la contraseña del usuario pricipal o secundario. Luego al clickar en "Iniciar", se cierra esta ventana y da lugar a la ventana "EleccionAdmin" en caso de dar las credenciales de nombre "Jesús" y contraseña "admin27", o da lugar a la ventana "EleccioUsuario" en caso dar cualquiera otra credencial correcta. 
 
-Registro - 
+Registro - Contiene campos que permiten la insercion en la base de datos de nuevos usuarios de segundo grado. Las credenciales deben ser correctas y que no contengan datos innecesarios. 
+
+TablaP - Contiene varios campos para hacer insert, delete, update y select de los Pokemon guardados en la base de datos. Asi mismo contiene comboBox con valores numericos que definen el genero, tipo primario, tipo secundario y naturaleza del pokemon. Estos son definidos en los botones declarados bajos estos mismos.
+
+TablaP_Usuario - Similar a tablaP, solo que es accesible por medio de un usuario de segundo nivel.
+
+TablaU - Accesible desde usuario de primer nivel, permite ver los tipos de usuarios existentes y hacer un delete en base al ID del usuario.
 
 ## Estructura del Proyecto
 
 ```plaintext
-proyecto/ 
+ProyectoPokemon/ 
 │
-├── src/                  # Código fuente del proyecto
-│   ├── package1/         # Paquete 1
-│   │   ├── Clase1.java
-│   │   └── ...
-│   ├── package2/         # Paquete 2
-│   │   ├── Clase2.java
-│   │   └── ...
-│   └── Main.java         # Clase principal
-│
-├── resources/            # Archivos de recursos
-│   ├── images/           # Imágenes utilizadas en la interfaz de usuario
-│   │   └── ...
-│   └── config.txt        # Archivo de configuración
-│
-├── build.xml             # Archivo de construcción de Ant
-└── README.md             # Documentación del proyecto
+├── SourcePackages/                  # Código fuente del proyecto
+   ├── Audio/                       # Carpeta que contiene archivos de audio utilizados en la aplicación
+   │   ├── A.wav                    # Archivo de audio A
+   │   ├── Gengar.wav               # Archivo de audio Gengar
+   │   ├── Lucario.wav              # Archivo de audio Lucario
+   │   ├── Magnezone.wav            # Archivo de audio Magnezone
+   │   ├── LvUp.wav                 # Archivo de audio LvUp
+   │   ├── Pichu.wav                # Archivo de audio Pichu
+   │   ├── Pikachu.wav              # Archivo de audio Pikachu
+   │   ├── Pokeball.wav             # Archivo de audio Pokeball
+   │   ├── Porygon-z.wav            # Archivo de audio Porygon-z
+   │   ├── Sableye.wav              # Archivo de audio Sableye
+   │   ├── Scizor.wav               # Archivo de audio Scizor
+   │   ├── ShutDown.wav             # Archivo de audio ShutDown
+   │   ├── SonidoBoli.wav           # Archivo de audio SonidoBoli
+   │   └── Voz.wav                  # Archivo de audio Voz
+   ├── BBDD/                        # Carpeta que contiene archivos relacionados con la base de datos
+   │   └── Conexion.java            # Archivo de conexión a la base de datos
+   ├── Controlador/                 # Carpeta que contiene los controladores del proyecto
+   │   ├── ControladorPokemon.java  # Controlador para gestionar la lógica relacionada con los Pokémon
+   │   └── ControladorUsuario.java  # Controlador para gestionar la lógica relacionada con los usuarios
+   ├── Imagenes/                    # Carpeta que contiene imágenes utilizadas en el proyecto
+   │   ├── apagar.png               # Archivo de imagen para botón de apagar
+   │   ├── avatar.png               # Archivo de imagen para avatar
+   │   ├── entrenador-pokemon.png  # Archivo de imagen para entrenador de Pokémon
+   │   ├── Gengar_NB.gif            # Archivo de imagen animada de Gengar
+   │   ├── Lucario_NB.gif           # Archivo de imagen animada de Lucario
+   │   ├── Magnezone_NB.gif         # Archivo de imagen animada de Magnezone
+   │   ├── menos.png                # Archivo de imagen para botón de menos
+   │   ├── Pichu_Es.gif             # Archivo de imagen animada de Pichu
+   │   ├── Pikachu_NB.gif           # Archivo de imagen animada de Pikachu
+   │   ├── pokebola.png             # Archivo de imagen para pokebola
+   │   ├── Porygon-Z_NB.gif         # Archivo de imagen animada de Porygon-Z
+   │   ├── Sableye_NB.gif           # Archivo de imagen animada de Sableye
+   │   ├── Scizor_NB.gif            # Archivo de imagen animada de Scizor
+   │   ├── sin-sonido.png           # Archivo de imagen para icono de silencio
+   │   └── volver_1.png             # Archivo de imagen para botón de volver
+   ├── Main/                        # Carpeta que contiene la clase principal del proyecto
+   │   └── Main.java                # Archivo principal de la aplicación
+   ├── Modelo/                      # Carpeta que contiene los modelos de datos del proyecto
+   │   ├── Pokemon.java             # Clase que define la estructura de un Pokémon
+   │   └── Usuario.java             # Clase que define la estructura de un Usuario
+   ├── Musica/                      # Carpeta que contiene archivos de música utilizados en la aplicación
+   │   ├── AccumulaTown.wav         # Archivo de música AccumulaTown
+   │   └── Pedro.wav                # Archivo de música Pedro
+   ├── Servicios/                   # Carpeta que contiene servicios adicionales utilizados en el proyecto
+   │   ├── LeerYEscribir.java       # Clase para leer y escribir archivos
+   │   ├── PokemonM.java            # Clase que define métodos relacionados con Pokémon
+   │   ├── ReproductorMusica.java   # Clase para reproducir música
+   │   └── UsuarioM.java            # Clase que define métodos relacionados con Usuario
+   ├── Texto/                       # Carpeta que contiene archivos de texto utilizados en el proyecto
+   │   ├── Genero.txt               # Archivo de texto para géneros de Pokémon
+   │   ├── Naturaleza.txt           # Archivo de texto para naturalezas de Pokémon
+   │   ├── Readme.txt               # Archivo de texto de Readme
+   │   ├── Si.txt                   # Archivo de texto para opciones afirmativas
+   │   └── Tipo.txt                 # Archivo de texto para tipos de Pokémon
+   └── Vista/                       # Carpeta que contiene las vistas o interfaces de usuario del proyecto
+      ├── EleccionAdmin.form       # Archivo de formulario de EleccionAdmin
+      ├── EleccionAdmin.java       # Archivo de clase de EleccionAdmin
+      ├── EleccionUsuario.form     # Archivo de formulario de EleccionUsuario
+      ├── EleccionUsuario.java     # Archivo de clase de EleccionUsuario
+      ├── Login.form               # Archivo de formulario de Login
+      ├── Login.java               # Archivo de clase de Login
+      ├── Registro.form            # Archivo de formulario de Registro
+      ├── Registro.java            # Archivo de clase de Registro
+      ├── TablaP.form              # Archivo de formulario de TablaP
+      ├── TablaP.java              # Archivo de clase de TablaP
+      ├── TablaP_Usuario.form     # Archivo de formulario de TablaP_Usuario
+      ├── TablaP_Usuario.java     # Archivo de clase de TablaP_Usuario
+      ├── TablaU.form              # Archivo de formulario de TablaU
+      └── TablaU.java              # Archivo de clase de TablaU
