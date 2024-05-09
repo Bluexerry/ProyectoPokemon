@@ -36,7 +36,45 @@ Con NetBeans instalado, puedes abrir el proyecto y comenzar a trabajar en él en
 
 ## Estructura del Proyecto
 
+### Audio
+Contiene archivos.wav de muy pocos segundos que sirven para interactuar con varios elementos en pantalla con podrian ser los Pokemon, el icono de entrenador del login, la pokeball del registro, etc.
 
+### BBDD
+Contiene una clase de java con metodos para la conexion con la base de datos del ordenador (usuario root y sin contraseña, en caso contrario, descargue la base de datos "proyecto_j").
+
+### Controlador
+Contiene dos clases de java, estas asi mismo llevan metodos sencillos que permiten un enlace desde la parte de la vista interactiva hacia los metodos de edicion de datos en la BBDD y visualizacion de estos.
+
+### Imagenes
+Contiene imagenes en baja resolucion las cuales cambian la apariencia de varios botones y elementos de la vista de la aplicacion.
+
+### Main
+Contiene una clase de java con un metodo Main en el cual se inicia la aplicacion y se setea su visualizacion
+
+### Modelo
+Contiene las clases de java con los objetos de Pokemon y Usuario, sus constructores, getters y setters.
+
+### Musica
+Contiene archivos.wav de varios minutos, estos definen la musica de fondo de la aplicacion (no deben ser de gran tamaño, en caso contrario Git Hub no podra manejarlos correctamente).
+
+### Servicios
+Contiene varias clases de java:
+
+LeerYEscribir - Contiene metodos que permiten la lectura y escritura de archivos por medio de String con sus debidas rutas de carpeta.
+PokemoM - Contiene metodos que permiten realizar inserts, deletes, updates y selects. Estos mismos son apoyados mediante una llamada a los metodos de Conexion dados en BBDD. 
+ReproductorMusica - Contiene metodos que permiten realizar cargar archivos de musica mediante inputs.
+UsuarioM - Contiene metodos que permiten realizar inserts, deletes, updates y selects. Estos mismos son apoyados mediante una llamada a los metodos de Conexion dados en BBDD. 
+
+### Texto
+Contiene archivos de texto.txt. Estos son visualizados mediante la interfaz y tambien pueden editarse.
+
+### Vista
+Contiene los jFrame necesairos para dirigir la interfaz de usuario:
+
+EleccionAdmin - Contiene iconos interactivos de imagenes.gif de Pokemon los cuales llaman al metodo de audio cuando son clickados, un icono de silencio para detener la reproduccion de la musica y dos botones. El primero lleva al jFrame "TablaP", el segundo al jFrame "TablaP_Usuario".
+EleccionUsuario - Similar al anterior, contiene ademas botones interactivos para dejar valoraciones mediante archivos.txt.
+Login - Interfaz pricipal del programa, contiene campos interactuables en los que dar el nombre y la contraseña del usuario pricipal o secundario. Luego al clickar en "Iniciar", se cierra esta ventana y da lugar a la ventana "EleccionAdmin" en caso de dar las credenciales de nombre "Jesús" y contraseña "admin27", o da lugar a la ventana "EleccioUsuario" en caso dar cualquiera otra credencial correcta. 
+Registro - 
 
 ## Estructura del Proyecto
 
