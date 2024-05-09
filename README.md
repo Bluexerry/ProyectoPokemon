@@ -36,7 +36,7 @@ Con NetBeans instalado, puedes abrir el proyecto y comenzar a trabajar en él en
 
 ## Estructura del Proyecto
 
-Describe la estructura del proyecto, incluyendo los archivos y carpetas principales, así como su propósito. Esto puede ser útil para que otros desarrolladores comprendan rápidamente cómo está organizado el proyecto.
+
 
 ## Estructura del Proyecto
 
