@@ -85,7 +85,7 @@ Esta carpeta contiene los "jFrame" necesarios para gestionar la interfaz de usua
 ```plaintext
 ProyectoPokemon/ 
 │
-├── SourcePackages/                 # Código fuente del proyecto
+└── SourcePackages/                 # Código fuente del proyecto
    ├── Audio/                       # Carpeta que contiene archivos de audio utilizados en la aplicación
    │   ├── A.wav                    # Archivo de audio A
    │   ├── Gengar.wav               # Archivo de audio Gengar
