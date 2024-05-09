@@ -1,12 +1,14 @@
 # Proyecto Pokémon Manager
 
-<div align="right">
-  Este proyecto consiste en una aplicación Java Swing desarrollada en el IDE NetBeans. Está diseñada para la gestión de información de Pokémon y usuarios, permitiendo acciones como el almacenamiento, eliminación o edición de datos. La aplicación incluye características como un sistema de acceso con diferentes niveles de usuario, registro de usuarios, visualización de datos almacenados, creación de archivos de texto, integración de música y elementos interactivos, entre otros.
+<div style="display:flex;">
+  <div style="flex:2;">
+    Este proyecto consiste en una aplicación Java Swing desarrollada en el IDE NetBeans. Está diseñada para la gestión de información de Pokémon y usuarios, permitiendo acciones como el almacenamiento, eliminación o edición de datos. La aplicación incluye características como un sistema de acceso con diferentes niveles de usuario, registro de usuarios, visualización de datos almacenados, creación de archivos de texto, integración de música y elementos interactivos, entre otros.
+  </div>
+  <div style="flex:1;">
+    <img src="PikachuRun.gif" alt="Divertido Pokémon GIF" width="300"/>
+  </div>
 </div>
 
-<div align="left">
-  <img src="PikachuRun.gif" alt="Divertido Pokémon GIF" width="300"/>
-</div>
 ## Requisitos Previos
 
 Antes de instalar NetBeans, asegúrate de que tu sistema cumple con los siguientes requisitos de hardware:
