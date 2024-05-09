@@ -8,8 +8,11 @@ Requisitos Previos
 Antes de instalar NetBeans, asegúrate de que tu sistema cumple con los siguientes requisitos de hardware:
 
 Procesador: Intel Pentium IV o superior.
+
 Memoria RAM: Se recomienda al menos 2 GB de RAM.
+
 Espacio en disco: Al menos 1.5 GB de espacio libre en disco para la instalación básica. Se recomienda más espacio si planeas instalar complementos adicionales.
+
 Resolución de pantalla: 1024x768 píxeles o superior.
 
 ### Instalación de NetBeans
