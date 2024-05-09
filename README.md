@@ -81,7 +81,7 @@ Esta carpeta contiene los "jFrame" necesarios para gestionar la interfaz de usua
 ```plaintext
 ProyectoPokemon/ 
 │
-├── SourcePackages/                  # Código fuente del proyecto
+├── SourcePackages/                 # Código fuente del proyecto
    ├── Audio/                       # Carpeta que contiene archivos de audio utilizados en la aplicación
    │   ├── A.wav                    # Archivo de audio A
    │   ├── Gengar.wav               # Archivo de audio Gengar
@@ -105,7 +105,7 @@ ProyectoPokemon/
    ├── Imagenes/                    # Carpeta que contiene imágenes utilizadas en el proyecto
    │   ├── apagar.png               # Archivo de imagen para botón de apagar
    │   ├── avatar.png               # Archivo de imagen para avatar
-   │   ├── entrenador-pokemon.png  # Archivo de imagen para entrenador de Pokémon
+   │   ├── entrenador-pokemon.png   # Archivo de imagen para entrenador de Pokémon
    │   ├── Gengar_NB.gif            # Archivo de imagen animada de Gengar
    │   ├── Lucario_NB.gif           # Archivo de imagen animada de Lucario
    │   ├── Magnezone_NB.gif         # Archivo de imagen animada de Magnezone
@@ -138,17 +138,17 @@ ProyectoPokemon/
    │   ├── Si.txt                   # Archivo de texto para opciones afirmativas
    │   └── Tipo.txt                 # Archivo de texto para tipos de Pokémon
    └── Vista/                       # Carpeta que contiene las vistas o interfaces de usuario del proyecto
-      ├── EleccionAdmin.form       # Archivo de formulario de EleccionAdmin
-      ├── EleccionAdmin.java       # Archivo de clase de EleccionAdmin
-      ├── EleccionUsuario.form     # Archivo de formulario de EleccionUsuario
-      ├── EleccionUsuario.java     # Archivo de clase de EleccionUsuario
-      ├── Login.form               # Archivo de formulario de Login
-      ├── Login.java               # Archivo de clase de Login
-      ├── Registro.form            # Archivo de formulario de Registro
-      ├── Registro.java            # Archivo de clase de Registro
-      ├── TablaP.form              # Archivo de formulario de TablaP
-      ├── TablaP.java              # Archivo de clase de TablaP
-      ├── TablaP_Usuario.form     # Archivo de formulario de TablaP_Usuario
-      ├── TablaP_Usuario.java     # Archivo de clase de TablaP_Usuario
-      ├── TablaU.form              # Archivo de formulario de TablaU
-      └── TablaU.java              # Archivo de clase de TablaU
+      ├── EleccionAdmin.form        # Archivo de formulario de EleccionAdmin
+      ├── EleccionAdmin.java        # Archivo de clase de EleccionAdmin
+      ├── EleccionUsuario.form      # Archivo de formulario de EleccionUsuario
+      ├── EleccionUsuario.java      # Archivo de clase de EleccionUsuario
+      ├── Login.form                # Archivo de formulario de Login
+      ├── Login.java                # Archivo de clase de Login
+      ├── Registro.form             # Archivo de formulario de Registro
+      ├── Registro.java             # Archivo de clase de Registro
+      ├── TablaP.form               # Archivo de formulario de TablaP
+      ├── TablaP.java               # Archivo de clase de TablaP
+      ├── TablaP_Usuario.form       # Archivo de formulario de TablaP_Usuario
+      ├── TablaP_Usuario.java       # Archivo de clase de TablaP_Usuario
+      ├── TablaU.form               # Archivo de formulario de TablaU
+      └── TablaU.java               # Archivo de clase de TablaU
