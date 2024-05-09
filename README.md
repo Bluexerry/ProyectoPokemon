@@ -15,7 +15,7 @@ Espacio en disco: Al menos 1.5 GB de espacio libre en disco para la instalación
 
 Resolución de pantalla: 1024x768 píxeles o superior.
 
-### Instalación de NetBeans
+## Instalación
 
 Para instalar NetBeans, sigue estos pasos:
 
@@ -25,10 +25,6 @@ Una vez descargado el instalador, haz doble clic en él para iniciar el proceso 
 Sigue las instrucciones del instalador para completar la instalación. Asegúrate de seleccionar las opciones adecuadas según tus necesidades, como la ubicación de instalación y los componentes adicionales que deseas incluir.
 Una vez que la instalación esté completa, puedes iniciar NetBeans desde el menú de inicio o desde el acceso directo en tu escritorio, si se creó uno durante la instalación.
 Con NetBeans instalado, puedes abrir el proyecto y comenzar a trabajar en él en tu entorno local.
-
-## Instalación
-
-Proporciona instrucciones paso a paso sobre cómo instalar y configurar el proyecto en un entorno local. Esto podría incluir clonar el repositorio, configurar el entorno de desarrollo y cualquier otra configuración necesaria.
 
 ## Uso
 
