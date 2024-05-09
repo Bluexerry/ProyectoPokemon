@@ -61,8 +61,11 @@ Contiene archivos.wav de varios minutos, estos definen la musica de fondo de la 
 Contiene varias clases de java:
 
 LeerYEscribir - Contiene metodos que permiten la lectura y escritura de archivos por medio de String con sus debidas rutas de carpeta.
+
 PokemoM - Contiene metodos que permiten realizar inserts, deletes, updates y selects. Estos mismos son apoyados mediante una llamada a los metodos de Conexion dados en BBDD. 
+
 ReproductorMusica - Contiene metodos que permiten realizar cargar archivos de musica mediante inputs.
+
 UsuarioM - Contiene metodos que permiten realizar inserts, deletes, updates y selects. Estos mismos son apoyados mediante una llamada a los metodos de Conexion dados en BBDD. 
 
 ### Texto
@@ -72,8 +75,11 @@ Contiene archivos de texto.txt. Estos son visualizados mediante la interfaz y ta
 Contiene los jFrame necesairos para dirigir la interfaz de usuario:
 
 EleccionAdmin - Contiene iconos interactivos de imagenes.gif de Pokemon los cuales llaman al metodo de audio cuando son clickados, un icono de silencio para detener la reproduccion de la musica y dos botones. El primero lleva al jFrame "TablaP", el segundo al jFrame "TablaP_Usuario".
+
 EleccionUsuario - Similar al anterior, contiene ademas botones interactivos para dejar valoraciones mediante archivos.txt.
+
 Login - Interfaz pricipal del programa, contiene campos interactuables en los que dar el nombre y la contraseña del usuario pricipal o secundario. Luego al clickar en "Iniciar", se cierra esta ventana y da lugar a la ventana "EleccionAdmin" en caso de dar las credenciales de nombre "Jesús" y contraseña "admin27", o da lugar a la ventana "EleccioUsuario" en caso dar cualquiera otra credencial correcta. 
+
 Registro - 
 
 ## Estructura del Proyecto
