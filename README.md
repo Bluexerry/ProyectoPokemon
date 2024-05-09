@@ -11,7 +11,9 @@ Procesador: Intel Pentium IV o superior.
 Memoria RAM: Se recomienda al menos 2 GB de RAM.
 Espacio en disco: Al menos 1.5 GB de espacio libre en disco para la instalación básica. Se recomienda más espacio si planeas instalar complementos adicionales.
 Resolución de pantalla: 1024x768 píxeles o superior.
+
 Instalación de NetBeans
+
 Para instalar NetBeans, sigue estos pasos:
 
 Visita el sitio web oficial de NetBeans en netbeans.apache.org en tu navegador web.
