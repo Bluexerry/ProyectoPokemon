@@ -23,15 +23,24 @@ Explica cómo utilizar el proyecto una vez que esté instalado. Incluye ejemplos
 
 Describe la estructura del proyecto, incluyendo los archivos y carpetas principales, así como su propósito. Esto puede ser útil para que otros desarrolladores comprendan rápidamente cómo está organizado el proyecto.
 
+## Estructura del Proyecto
+
+```plaintext
 proyecto/
 │
-├── src/ # Código fuente del proyecto
-│ ├── package1/ # Paquete 1
-│ ├── package2/ # Paquete 2
-│ └── Main.java # Clase principal
+├── src/                  # Código fuente del proyecto
+│   ├── package1/         # Paquete 1
+│   │   ├── Clase1.java
+│   │   └── ...
+│   ├── package2/         # Paquete 2
+│   │   ├── Clase2.java
+│   │   └── ...
+│   └── Main.java         # Clase principal
 │
-├── resources/ # Archivos de recursos
-│ ├── images/ # Imágenes utilizadas en la interfaz de usuario
-│ └── config.txt # Archivo de configuración
+├── resources/            # Archivos de recursos
+│   ├── images/           # Imágenes utilizadas en la interfaz de usuario
+│   │   └── ...
+│   └── config.txt        # Archivo de configuración
 │
-└── README.md # Documentación del proyecto
+├── build.xml             # Archivo de construcción de Ant
+└── README.md             # Documentación del proyecto
