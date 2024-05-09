@@ -1,7 +1,5 @@
 # Proyecto Pokémon Manager
 
-# Proyecto Pokémon Manager
-
 <div style="display: flex;">
         <section id="seccion1" style="flex: 30%;">
             <article>
