@@ -66,10 +66,10 @@ public class UsuarioM {
     public void EliminarUsuario(Usuario usuario) {
 
         //Definimos una variable del nombre del usuario y la igualamos al getter de este
-        String nombre = usuario.getNombre();
+        int id = usuario.getId();
 
         //Hacemos el delete del valor del nombre
-        String delete = "DELETE FROM usuario WHERE nombre = '" + nombre + "'";
+        String delete = "DELETE FROM usuario WHERE ID = " + id;
 
         //Ejecutamos la query
         Conexion.ejecutarSentenciaEdit(delete);

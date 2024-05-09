@@ -10,9 +10,9 @@ public class Usuario {
 
     public Usuario() {
     }
-    
-    public Usuario(String nombre){
-        this.nombre = nombre;
+
+    public Usuario(int id) {
+        this.id = id;
     }
 
     public Usuario(String nombre, String contraseña) {

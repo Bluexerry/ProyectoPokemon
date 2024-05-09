@@ -40,8 +40,8 @@ public class TablaU extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         Return = new javax.swing.JLabel();
         Minimizar = new javax.swing.JLabel();
-        NombreUs = new javax.swing.JLabel();
-        txtNombre = new javax.swing.JTextField();
+        IdUs = new javax.swing.JLabel();
+        txtId = new javax.swing.JTextField();
         Eliminar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -86,7 +86,7 @@ public class TablaU extends javax.swing.JFrame {
                 IconoHombreActionPerformed(evt);
             }
         });
-        jPanel3.add(IconoHombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 130, 140));
+        jPanel3.add(IconoHombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 130, 140));
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 51));
         jPanel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -141,19 +141,19 @@ public class TablaU extends javax.swing.JFrame {
 
         jPanel3.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 650, 50));
 
-        NombreUs.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        NombreUs.setText("Nombre:");
-        jPanel3.add(NombreUs, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
+        IdUs.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        IdUs.setText("ID:");
+        jPanel3.add(IdUs, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
-        txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtId.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtNombreKeyReleased(evt);
+                txtIdKeyReleased(evt);
             }
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtNombreKeyTyped(evt);
+                txtIdKeyTyped(evt);
             }
         });
-        jPanel3.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 120, 20));
+        jPanel3.add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 160, 20));
 
         Eliminar.setBackground(new java.awt.Color(241, 227, 165));
         Eliminar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
@@ -264,48 +264,45 @@ public class TablaU extends javax.swing.JFrame {
         ReproductorMusica.reproducirAudio("/Audio/A.wav");
 
         //Recoge el texto de nombre y verifica si esta vacio
-        if (txtNombre.getText().isEmpty()) {
+        if (txtId.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Debe rellenar el campo de Nombre para poder eliminar");
         } else {
 
             //Igualamos las variables al texto recogido en el campo
-            String nombre = txtNombre.getText();
+            int ID = Integer.parseInt(txtId.getText());
 
             //Creamos el objeto y llamamos al metodo para eliminar
-            Usuario usuario = new Usuario(nombre);
+            Usuario usuario = new Usuario(ID);
             new ControladorUsuario().EliminarUsuario(usuario);
         }
     }//GEN-LAST:event_EliminarActionPerformed
 
-    private void txtNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyTyped
+    private void txtIdKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdKeyTyped
         //Tipado que impide escribir valores numericos enteros
-        char c = evt.getKeyChar();
-        if (Character.isDigit(c)) {
-            evt.consume();
-        }
+       
 
         //Tipado que impide escribir mas de 10 caracteres
-        if (txtNombre.getText().length() >= 10) {
+        if (txtId.getText().length() >= 10) {
             evt.consume(); // Consumir el evento para evitar que se agregue más caracteres
         }
-    }//GEN-LAST:event_txtNombreKeyTyped
+    }//GEN-LAST:event_txtIdKeyTyped
 
-    private void txtNombreKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyReleased
+    private void txtIdKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdKeyReleased
 
-    }//GEN-LAST:event_txtNombreKeyReleased
+    }//GEN-LAST:event_txtIdKeyReleased
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton Eliminar;
     private javax.swing.JButton IconoHombre;
+    private javax.swing.JLabel IdUs;
     private javax.swing.JLabel Minimizar;
     public javax.swing.JButton Mostrar;
-    private javax.swing.JLabel NombreUs;
     private javax.swing.JLabel Return;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTable tablaU;
-    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtId;
     // End of variables declaration//GEN-END:variables
 }
