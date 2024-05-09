@@ -1,95 +1,80 @@
-# Nombre del Proyecto
+# Proyecto Pokémon Manager
 
-Esta aplicación de Java Swing dirigida en IDE Net Beans va dirigida a la recogida de información de Pokémon y usuarios para su posterior guardado, eliminación o edición de datos. Permite acciones desde un acceso login con un único usuario de primer nivel y varios de segundo nivel, registro de usuarios, información de datos registrados, creación de archivos de texto para una mayor valoración de la aplicación, música, elementos interactivos, etc.
+Este proyecto consiste en una aplicación Java Swing desarrollada en el IDE NetBeans. Está diseñada para la gestión de información de Pokémon y usuarios, permitiendo acciones como el almacenamiento, eliminación o edición de datos. La aplicación incluye características como un sistema de acceso con diferentes niveles de usuario, registro de usuarios, visualización de datos almacenados, creación de archivos de texto, integración de música y elementos interactivos, entre otros.
 
 ## Requisitos Previos
 
-Requisitos Previos
 Antes de instalar NetBeans, asegúrate de que tu sistema cumple con los siguientes requisitos de hardware:
 
-Procesador: Intel Pentium IV o superior.
-
-Memoria RAM: Se recomienda al menos 2 GB de RAM.
-
-Espacio en disco: Al menos 1.5 GB de espacio libre en disco para la instalación básica. Se recomienda más espacio si planeas instalar complementos adicionales.
-
-Resolución de pantalla: 1024x768 píxeles o superior.
+- Procesador: Intel Pentium IV o superior.
+- Memoria RAM: Se recomienda al menos 2 GB de RAM.
+- Espacio en disco: Al menos 1.5 GB de espacio libre en disco para la instalación básica. Se recomienda más espacio si planeas instalar complementos adicionales.
+- Resolución de pantalla: 1024x768 píxeles o superior.
 
 ## Instalación
 
 Para instalar NetBeans, sigue estos pasos:
 
-Visita el sitio web oficial de NetBeans en netbeans.apache.org en tu navegador web.
-Navega hasta la sección de descargas y selecciona la versión de NetBeans que deseas instalar. Selecciona la versión que sea compatible con tu sistema operativo.
-Una vez descargado el instalador, haz doble clic en él para iniciar el proceso de instalación.
-Sigue las instrucciones del instalador para completar la instalación. Asegúrate de seleccionar las opciones adecuadas según tus necesidades, como la ubicación de instalación y los componentes adicionales que deseas incluir.
-Una vez que la instalación esté completa, puedes iniciar NetBeans desde el menú de inicio o desde el acceso directo en tu escritorio, si se creó uno durante la instalación.
-Con NetBeans instalado, puedes abrir el proyecto y comenzar a trabajar en él en tu entorno local.
+1. Visita el sitio web oficial de NetBeans en [netbeans.apache.org](https://netbeans.apache.org) en tu navegador web.
+2. Navega hasta la sección de descargas y selecciona la versión de NetBeans que deseas instalar, compatible con tu sistema operativo.
+3. Una vez descargado el instalador, haz doble clic en él para iniciar el proceso de instalación.
+4. Sigue las instrucciones del instalador para completar la instalación, asegurándote de seleccionar las opciones adecuadas según tus necesidades.
+5. Una vez que la instalación esté completa, puedes iniciar NetBeans desde el menú de inicio o desde el acceso directo en tu escritorio, si se creó uno durante la instalación.
 
-Además, debemos descargar el driver de MySQL para java en la siguiente web: https://dev.mysql.com/downloads/connector/j/
-Tras hacerlo, introducimos el archivo en la carpeta "Libraries" autogenerada por el IDE justo debajo de "Source Packages"
+Además, debes descargar el driver de MySQL para Java desde [este enlace](https://dev.mysql.com/downloads/connector/j/). Una vez descargado, coloca el archivo en la carpeta "Libraries" autogenerada por el IDE, justo debajo de "Source Packages".
 
 ## Uso
 
-1. Descarga el proyecto desde la raíz en Net Beans (asegurate que tenga la carpeta sources y todo el resto del compendio para que funcione correctamente, en caso contrario no se podrían encontrar algunos archivos necesarios).
-2. Abre el proyecto, verifica que no existan errores de códigos. En tal caso abre el proyecto mediante Notepad++ para editar líneas de código inaccesibles o editalas en el propio IDE si este lo permite.
-3. La visualización de la ventana principal está dada en la carpeta Main, solo es necesario hacer clic en el botón de Play para que inicie el proyecto.
-4. Interactúa con la interfaz de usuario, crea usuarios de segundo nivel para crear, borrar, editar o visualizar la lista completa de Pokémon o logueate en el sistema mediante el usuario de primer nivel "Jesús" con la contraseña "admin27".
-5. Verifica las funciones del programa, si no te sientes conforme con lo visto o prevés mejoras a corto plazo házmelo saber al correo jmvazquezherrera@adaits.es .
+1. Descarga el proyecto desde la raíz en NetBeans, asegurándote de que incluya la carpeta "sources" y todos los demás archivos necesarios para un funcionamiento correcto. En caso contrario, algunos archivos necesarios podrían no encontrarse.
+2. Abre el proyecto y verifica la ausencia de errores de código. Si encuentras errores, puedes corregirlos en el IDE o mediante un editor de texto como Notepad++.
+3. La ventana principal se encuentra en la carpeta "Main". Haz clic en el botón de Play para iniciar el proyecto.
+4. Interactúa con la interfaz de usuario. Puedes crear usuarios de segundo nivel para gestionar la lista completa de Pokémon, incluyendo acciones como crear, borrar, editar o visualizar. También puedes iniciar sesión en el sistema utilizando las credenciales del usuario de primer nivel "Jesús" con la contraseña "admin27".
+5. Verifica las funciones del programa y, si consideras necesario realizar mejoras a corto plazo, no dudes en contactarme a través del correo jmvazquezherrera@adaits.es.
 
 ## Estructura del Proyecto
 
 ### Audio
-Contiene archivos.wav de muy pocos segundos que sirven para interactuar con varios elementos en pantalla con podrían ser los Pokémon, el icono de entrenador del login, la pokeball del registro, etc.
+Esta carpeta contiene archivos de formato .wav de corta duración que se utilizan para interactuar con varios elementos visuales de la aplicación, como los Pokémon, el icono de entrenador en la pantalla de inicio de sesión, y la pokébola en la pantalla de registro.
 
 ### BBDD
-Contiene una clase de java con métodos para la conexión con la base de datos del ordenador (usuario root y sin contraseña, en caso contrario, descargue la base de datos "proyecto_j").
+En esta sección se encuentra una clase Java que proporciona métodos para establecer la conexión con la base de datos del sistema. Se asume que se utiliza un usuario "root" sin contraseña para acceder a la base de datos, pero en caso contrario, se recomienda descargar y utilizar la base de datos "proyecto_j".
 
 ### Controlador
-Contiene dos clases de java, estas así mismo llevan métodos sencillos que permiten un enlace desde la parte de la vista interactiva hacia los métodos de edición de datos en la BBDD y visualización de estos.
+Contiene clases Java que actúan como controladores, facilitando la comunicación entre la interfaz de usuario y la base de datos. Estas clases implementan métodos para la edición y visualización de datos en la base de datos.
 
 ### Imágenes
-Contiene imágenes en baja resolución las cuales cambian la apariencia de varios botones y elementos de la vista de la aplicación.
+Aquí se encuentran imágenes en baja resolución que se utilizan para personalizar la apariencia de varios botones y elementos visuales de la aplicación.
 
 ### Main
-Contiene una clase de java con un método Main en el cual se inicia la aplicación y se setea su visualización
+Esta sección contiene la clase principal del proyecto, que incluye el método Main encargado de iniciar la aplicación y configurar su visualización inicial.
 
 ### Modelo
-Contiene las clases de java con los objetos de Pokémon y Usuario, sus constructores, getters y setters.
+Contiene clases Java que definen los objetos de Pokémon y Usuario, incluyendo sus constructores, métodos "getters" y "setters" para acceder y modificar los atributos de estos objetos.
 
 ### Música
-Contiene archivos.wav de varios minutos, estos definen la música de fondo de la aplicación (no deben ser de gran tamaño, en caso contrario Git Hub no podrá manejarlos correctamente).
+En esta carpeta se encuentran archivos de formato .wav de mayor duración que se utilizan como música de fondo en la aplicación. Se recomienda que los archivos de música no sean de gran tamaño para garantizar la correcta gestión de los mismos por parte de GitHub.
 
 ### Servicios
-Contiene varias clases de java:
+Contiene diversas clases Java que proporcionan servicios adicionales utilizados en la aplicación:
 
-LeerYEscribir - Contiene métodos que permiten la lectura y escritura de archivos por medio de String con sus debidas rutas de carpeta.
-
-PokemoM - Contiene métodos que permiten realizar inserts, deletes, updates y selects. Estos mismos son apoyados mediante una llamada a los métodos de Conexión dados en BBDD. 
-
-ReproductorMusica - Contiene métodos que permiten realizar cargar archivos de música mediante inputs.
-
-UsuarioM - Contiene métodos que permiten realizar inserts, deletes, updates y selects. Estos mismos son apoyados mediante una llamada a los métodos de Conexión dados en BBDD. 
+- LeerYEscribir: Clase que ofrece métodos para la lectura y escritura de archivos utilizando cadenas de caracteres y rutas de archivo.
+- PokemoM: Clase que proporciona métodos para realizar operaciones de inserción, eliminación, actualización y selección de datos relacionados con los Pokémon en la base de datos.
+- ReproductorMusica: Clase que facilita la carga y reproducción de archivos de música.
+- UsuarioM: Clase que ofrece métodos para realizar operaciones de inserción, eliminación, actualización y selección de datos relacionados con los Usuarios en la base de datos.
 
 ### Texto
-Contiene archivos de texto.txt. Estos son visualizados mediante la interfaz y también pueden editarse.
+Contiene archivos de texto en formato .txt que se utilizan para diversos propósitos en la aplicación, como la visualización y edición de información en la interfaz de usuario.
 
 ### Vista
-Contiene los jFrame necesarios para dirigir la interfaz de usuario:
+Esta carpeta contiene los "jFrame" necesarios para gestionar la interfaz de usuario de la aplicación:
 
-EleccionAdmin - Contiene iconos interactivos de imagenes.gif de Pokémon los cuales llaman al método de audio cuando son clicados, un icono de silencio para detener la reproducción de la música y dos botones. El primero lleva al jFrame "TablaP", el segundo al jFrame "TablaP_Usuario".
-
-EleccionUsuario - Similar al anterior, contiene además botones interactivos para dejar valoraciones mediante archivos.txt.
-
-Login - Interfaz principal del programa, contiene campos interactuales en los que dar el nombre y la contraseña del usuario principal o secundario. Luego al clicar en "Iniciar", se cierra esta ventana y da lugar a la ventana "EleccionAdmin" en caso de dar las credenciales de nombre "Jesús" y contraseña "admin27", o da lugar a la ventana "EleccioUsuario" en caso dar cualquiera otra credencial correcta. 
-
-Registro - Contiene campos que permiten la inserción en la base de datos de nuevos usuarios de segundo grado. Las credenciales deben ser correctas y que no contengan datos innecesarios. 
-
-TablaP - Contiene varios campos para hacer insert, delete, update y select de los Pokémon guardados en la base de datos. Así mismo contiene comboBox con valores numéricos que definen el género, tipo primario, tipo secundario y naturaleza del Pokémon. Estos son definidos en los botones declarados bajos estos mismos.
-
-TablaP_Usuario - Similar a tablaP, solo que es accesible por medio de un usuario de segundo nivel.
-
-TablaU - Accesible desde usuario de primer nivel, permite ver los tipos de usuarios existentes y hacer un delete basándonos en el ID del usuario.
+- EleccionAdmin: Interfaz que incluye iconos interactivos de Pokémon y botones para la gestión de datos. Permite la navegación hacia otras interfaces de usuario.
+- EleccionUsuario: Similar a EleccionAdmin, pero incluye botones adicionales para dejar valoraciones mediante archivos de texto.
+- Login: Interfaz principal de inicio de sesión. Permite el ingreso de credenciales de usuario y la navegación hacia otras interfaces dependiendo del nivel de acceso.
+- Registro: Interfaz para registrar nuevos usuarios de segundo grado en la base de datos.
+- TablaP: Interfaz para la gestión de datos de Pokémon, incluyendo inserción, eliminación, actualización y selección de datos.
+- TablaP_Usuario: Similar a TablaP, pero accesible solo para usuarios de segundo nivel.
+- TablaU: Interfaz para visualizar los tipos de usuarios existentes y realizar eliminaciones basadas en el ID de usuario.
 
 ## Estructura del Proyecto
 
