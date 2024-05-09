@@ -1,6 +1,6 @@
 # Nombre del Proyecto
 
-Esta aplicacion de Java Swing dirigida en IDE Net Beans va dirigida a la recogida de informacion de Pokemon y usuarios para su posterior guardado, eliminacion o edicion de datos. Permite acciones desde un acceso Login con un unico usuario de primer nivel y varios de segundo nivel, registro de usuarios, informacion de datos registrados, creacion de archivos de texto para una mayor valoracion de aplicacion, musica y elementos interactivos, etc.
+Esta aplicacion de Java Swing dirigida en IDE Net Beans va dirigida a la recogida de informacion de Pokemon y usuarios para su posterior guardado, eliminacion o edicion de datos. Permite acciones desde un acceso Login con un unico usuario de primer nivel y varios de segundo nivel, registro de usuarios, informacion de datos registrados, creacion de archivos de texto para una mayor valoracion de la aplicacion, musica, elementos interactivos, etc.
 
 ## Requisitos Previos
 
@@ -28,12 +28,11 @@ Con NetBeans instalado, puedes abrir el proyecto y comenzar a trabajar en él en
 
 ## Uso
 
-Explica cómo utilizar el proyecto una vez que esté instalado. Incluye ejemplos de código, comandos de terminal, o capturas de pantalla si es necesario. Por ejemplo:
-
-1. Abre el proyecto en NetBeans.
-2. Compila el proyecto.
-3. Ejecuta la clase principal `Main.java`.
-4. Interactúa con la interfaz de usuario para hacer X, Y, Z.
+1. Descarga el proyecto desde la raiz en Net Beans (asegurate que tenga la carpeta sources y todo el resto del compendio para que funcione correctamente, en caso contrario no se podrian encontrar algunos archivos necesarios).
+2. Abre el proyecto, verifica que no existan errores de codigos. En tal caso abre el proyecto mediante Notepad++ para editar lineas de codigo innacesibles o editalas en el propio IDE si este lo permite.
+3. La visualizacion de la ventana principal esta dada en la carpeta Main, solo es necesario hacer click en el boton de play para que inicie el proyecto.
+4. Interactúa con la interfaz de usuario, crea usuarios de segundo nivel para crear, borrar, editar o visualizar la lista completa de pokemon o logueate en el sistema mediante el usuario de primer nivel "Jesús" con la contraseña "admin27".
+5. Verifica las funciones del programa, si no te sientes conforme con lo visto o preves mejoras a corto plazo hazmelo saber al correo jmvazquezherrera@adaits.es .
 
 ## Estructura del Proyecto
 
@@ -42,7 +41,7 @@ Describe la estructura del proyecto, incluyendo los archivos y carpetas principa
 ## Estructura del Proyecto
 
 ```plaintext
-proyecto/
+proyecto/ 
 │
 ├── src/                  # Código fuente del proyecto
 │   ├── package1/         # Paquete 1
