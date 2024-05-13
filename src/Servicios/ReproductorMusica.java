@@ -8,7 +8,6 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
-import javax.swing.JOptionPane;
 
 public class ReproductorMusica {
 
@@ -34,10 +33,8 @@ public class ReproductorMusica {
                     clip.loop(Clip.LOOP_CONTINUOUSLY);
 
                 } catch (FileNotFoundException e) {
-                    JOptionPane.showMessageDialog(null, "No se pudo encontrar el archivo de musica");
                     System.err.println("No se pudo encontrar el archivo de música");
                 } catch (IOException | LineUnavailableException | UnsupportedAudioFileException e) {
-                    JOptionPane.showMessageDialog(null, "Error al cargar el archivo de música");
                     System.err.println("Error al cargar el archivo de música");
                 }
             }

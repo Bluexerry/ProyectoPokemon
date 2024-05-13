@@ -43,7 +43,7 @@ public class LeerYEscribir {
 
     public static void Escribir() {
         // Ruta completa del directorio "Texto"
-       String directorioTexto = "C:/Users/Jesús/Documents/NetBeansProjects/Proyecto_Pokemon/proyectoPokemon/src/Texto";
+       String directorioTexto = "C:/Users/Jesús/Documents/NetBeansProjects/Proyecto_Pokemon/ProyectoP/src/Texto";
         // Nombre del archivo a crear
         String archivo = "Nuevo.txt";
 
