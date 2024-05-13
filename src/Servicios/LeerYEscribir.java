@@ -17,6 +17,7 @@ public class LeerYEscribir {
             // Obtiene la URL del archivo desde el classpath
             URL url = LeerYEscribir.class.getResource(ruta);
             if (url == null) {
+                JOptionPane.showMessageDialog(null, "No se pudo encontrar el archivo");
                 System.out.println("No se pudo encontrar el archivo.");
                 return;
             }
@@ -37,13 +38,14 @@ public class LeerYEscribir {
             // Muestra el texto con saltos de línea en un JOptionPane
             JOptionPane.showMessageDialog(null, "<html><body><p style='width: 300px;'>" + textoConSaltos.toString() + "</p></body></html>");
         } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Error al leer el archivo: " + e);
             System.out.println("Error al leer el archivo: " + e.getMessage());
         }
     }
 
     public static void Escribir() {
         // Ruta completa del directorio "Texto"
-       String directorioTexto = "C:/Users/Jesús/Documents/NetBeansProjects/Proyecto_Pokemon/ProyectoP/src/Texto";
+        String directorioTexto = "C:/Users/Jesús/Documents/NetBeansProjects/Proyecto_Pokemon/ProyectoP/src/Texto";
         // Nombre del archivo a crear
         String archivo = "Nuevo.txt";
 
@@ -62,8 +64,9 @@ public class LeerYEscribir {
             // Cierra el BufferedWriter
             writer.close();
 
-            JOptionPane.showMessageDialog(null, "Se ha creado el archivo correctamente y se ha añadido el contenido.");
+            JOptionPane.showMessageDialog(null, "Se ha creado el archivo correctamente y se ha añadido el contenido");
         } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Error al crear el archivo: " + e);
             System.out.println("Error al escribir en el archivo: " + e.getMessage());
         }
     }
