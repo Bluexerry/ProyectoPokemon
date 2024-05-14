@@ -80,6 +80,72 @@ Esta carpeta contiene los "jFrame" necesarios para gestionar la interfaz de usua
 - TablaP_Usuario: Similar a TablaP, pero accesible solo para usuarios de segundo nivel.
 - TablaU: Interfaz para visualizar los tipos de usuarios existentes y realizar eliminaciones basadas en el ID de usuario.
 
+# Base de Datos para Proyecto Pokémon
+
+Este repositorio contiene una base de datos diseñada para un proyecto relacionado con Pokémon. A continuación se presenta una descripción detallada de las tablas y su estructura:
+
+## Descripción General
+
+- **Servidor**: 127.0.0.1
+- **Tiempo de generación**: 14-05-2024 a las 18:00:11
+- **Versión del servidor de base de datos**: 10.4.32-MariaDB
+- **Versión de PHP**: 8.0.30
+
+## Tablas
+
+### 1. `genero`
+
+Esta tabla almacena los géneros de los Pokémon.
+
+- **Campos**:
+  - `ID`: Identificador único del género.
+  - `Nombre`: Nombre del género.
+
+### 2. `naturaleza`
+
+Contiene las diferentes naturalezas que pueden tener los Pokémon.
+
+- **Campos**:
+  - `ID`: Identificador único de la naturaleza.
+  - `Nombre`: Nombre de la naturaleza.
+
+### 3. `tipo`
+
+Almacena los tipos de los Pokémon.
+
+- **Campos**:
+  - `ID`: Identificador único del tipo.
+  - `Nombre`: Nombre del tipo.
+
+### 4. `pokemon`
+
+Esta tabla contiene información básica sobre los Pokémon.
+
+- **Campos**:
+  - `Num_Pok`: Número identificador del Pokémon.
+  - `Nombre`: Nombre del Pokémon.
+  - `Genero_id`: ID del género del Pokémon.
+  - `Tipo1_id`: ID del primer tipo del Pokémon.
+  - `Tipo2_id`: ID del segundo tipo del Pokémon (puede ser nulo).
+  - `Naturaleza_id`: ID de la naturaleza del Pokémon.
+
+### 5. `usuario`
+
+Almacena información sobre los usuarios del sistema.
+
+- **Campos**:
+  - `ID`: Identificador único del usuario.
+  - `Nombre`: Nombre del usuario.
+  - `Apellido`: Apellido del usuario.
+  - `Telefono`: Número de teléfono del usuario.
+  - `Contrasena`: Contraseña del usuario.
+
+## Instrucciones de Uso
+
+- Para crear la base de datos, importa el archivo SQL proporcionado en tu servidor MySQL o MariaDB.
+- La estructura y los datos están diseñados para funcionar en conjunto con un proyecto relacionado con Pokémon.
+- Las relaciones entre tablas están establecidas mediante claves foráneas para mantener la integridad de los datos.
+
 ## Estructura del Proyecto
 
 ```plaintext
