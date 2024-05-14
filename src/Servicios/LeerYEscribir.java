@@ -58,6 +58,7 @@ public class LeerYEscribir {
         try {
             // Solicita al usuario que escriba en el archivo
             String texto = JOptionPane.showInputDialog("Escribe el contenido para el nuevo archivo");
+            
             if (texto != null) {
                 // Crea el archivo en el directorio "Texto" en base al directorioTexto, luego una llamada al metodo System para obtener un separador de directorios
                 String rutaCompleta = directorioTexto + System.getProperty("file.separator") + archivo;
