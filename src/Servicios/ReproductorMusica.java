@@ -14,15 +14,18 @@ public class ReproductorMusica {
     public static Clip clip;
 
     public static void iniciarReproduccionMusica() {
+        // Se inicia un nuevo hilo para reproducir la música
         Thread hiloMusica = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
-                    // Cargar el archivo de música
+                    // Cargar el archivo de música desde el directorio de recursos
                     InputStream inputStream = ReproductorMusica.class.getResourceAsStream("/Musica/AccumulaTown.wav");
+                    // Si el archivo de música no se encuentra, lanzar una excepción FileNotFoundException
                     if (inputStream == null) {
                         throw new FileNotFoundException("Archivo de música no encontrado");
                     }
+                    // Obtener un flujo de audio para el archivo de música
                     AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(inputStream);
 
                     // Obtener un Clip para reproducir el archivo de música
@@ -33,18 +36,21 @@ public class ReproductorMusica {
                     clip.loop(Clip.LOOP_CONTINUOUSLY);
 
                 } catch (FileNotFoundException e) {
+                    // Manejar el caso en el que el archivo de música no se encuentre
                     System.err.println("No se pudo encontrar el archivo de música");
                 } catch (IOException | LineUnavailableException | UnsupportedAudioFileException e) {
+                    // Manejar otros posibles errores al cargar el archivo de música
                     System.err.println("Error al cargar el archivo de música");
                 }
             }
         });
+        // Iniciar el hilo para reproducir la música
         hiloMusica.start();
     }
 
     public static void reproducirAudio(String audio) {
         try {
-            // Obtener el flujo de entrada del archivo de audio
+            // Obtener el flujo de entrada del archivo de audio desde el directorio de recursos
             InputStream inputStream = ReproductorMusica.class.getResourceAsStream(audio);
 
             // Verificar si el flujo de entrada es nulo
