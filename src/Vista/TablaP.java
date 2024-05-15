@@ -407,7 +407,7 @@ public class TablaP extends javax.swing.JFrame {
 
             //Creamos el objeto y llamamos al metodo para insertar
             Pokemon pokemon = new Pokemon(nombre, num_pok, genero, tipo1, tipo2, naturaleza);
-            new ControladorPokemon().CrearPokemon(pokemon);
+            controladorPokemon.CrearPokemon(pokemon);
         }
     }//GEN-LAST:event_btnGuardarActionPerformed
 
@@ -469,7 +469,7 @@ public class TablaP extends javax.swing.JFrame {
 
             //Creamos el objeto y llamamos al metodo para setear
             Pokemon pokemon = new Pokemon(nombre, genero, naturaleza);
-            new ControladorPokemon().EditarPokemon(pokemon);
+            controladorPokemon.EditarPokemon(pokemon);
         }
     }//GEN-LAST:event_btnEditarActionPerformed
 
@@ -487,7 +487,7 @@ public class TablaP extends javax.swing.JFrame {
 
             //Creamos el objeto y llamamos al metodo para setear
             Pokemon pokemon = new Pokemon(nombre);
-            new ControladorPokemon().EliminarPokemon(pokemon);
+            controladorPokemon.EliminarPokemon(pokemon);
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
