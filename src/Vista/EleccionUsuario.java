@@ -3,13 +3,16 @@ package Vista;
 import Servicios.LeerYEscribir;
 import Servicios.ReproductorMusica;
 import java.awt.Window;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 public class EleccionUsuario extends javax.swing.JFrame {
 
     //Instancias
-    private TablaP_Usuario busquedaPU;
+    public TablaP_Usuario busquedaPU;
     Login login = new Login();
     int xMouse, yMouse;
 
@@ -39,9 +42,10 @@ public class EleccionUsuario extends javax.swing.JFrame {
         No = new javax.swing.JButton();
         Si = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        Return = new javax.swing.JLabel();
         Minimizar = new javax.swing.JLabel();
+        Return = new javax.swing.JLabel();
         Sableye = new javax.swing.JButton();
+        ComboMusica = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -57,11 +61,11 @@ public class EleccionUsuario extends javax.swing.JFrame {
                 BuscarEditarActionPerformed(evt);
             }
         });
-        jPanel1.add(BuscarEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 260, 38));
+        jPanel1.add(BuscarEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 260, 38));
 
         Label1.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         Label1.setText("¿Te gusta la aplicacion?");
-        jPanel1.add(Label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
+        jPanel1.add(Label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
 
         ClickMe.setBackground(new java.awt.Color(241, 227, 165));
         ClickMe.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
@@ -72,7 +76,7 @@ public class EleccionUsuario extends javax.swing.JFrame {
                 ClickMeActionPerformed(evt);
             }
         });
-        jPanel1.add(ClickMe, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, -1, -1));
+        jPanel1.add(ClickMe, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, -1, -1));
 
         Valorar.setBackground(new java.awt.Color(241, 227, 165));
         Valorar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
@@ -83,7 +87,7 @@ public class EleccionUsuario extends javax.swing.JFrame {
                 ValorarActionPerformed(evt);
             }
         });
-        jPanel1.add(Valorar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 90, -1));
+        jPanel1.add(Valorar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 90, -1));
 
         Leer.setBackground(new java.awt.Color(241, 227, 165));
         Leer.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
@@ -98,7 +102,7 @@ public class EleccionUsuario extends javax.swing.JFrame {
 
         Label2.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         Label2.setText("¿Te gusta lo que escuchas?");
-        jPanel1.add(Label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, -1, -1));
+        jPanel1.add(Label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 270, -1, -1));
 
         Gengar.setBackground(new java.awt.Color(255, 204, 51));
         Gengar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Gengar_NB.gif"))); // NOI18N
@@ -109,7 +113,7 @@ public class EleccionUsuario extends javax.swing.JFrame {
                 GengarActionPerformed(evt);
             }
         });
-        jPanel1.add(Gengar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, -1));
+        jPanel1.add(Gengar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, -1, -1));
 
         Lucario.setBackground(new java.awt.Color(255, 204, 51));
         Lucario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Lucario_NB.gif"))); // NOI18N
@@ -120,7 +124,7 @@ public class EleccionUsuario extends javax.swing.JFrame {
                 LucarioActionPerformed(evt);
             }
         });
-        jPanel1.add(Lucario, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, -1, -1));
+        jPanel1.add(Lucario, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 30, -1, -1));
 
         Scrizor.setBackground(new java.awt.Color(255, 204, 51));
         Scrizor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Scizor_NB.gif"))); // NOI18N
@@ -131,7 +135,7 @@ public class EleccionUsuario extends javax.swing.JFrame {
                 ScrizorActionPerformed(evt);
             }
         });
-        jPanel1.add(Scrizor, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 180, -1, -1));
+        jPanel1.add(Scrizor, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 120, -1, -1));
 
         Magnezone.setBackground(new java.awt.Color(255, 204, 51));
         Magnezone.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Magnezone_NB.gif"))); // NOI18N
@@ -164,7 +168,7 @@ public class EleccionUsuario extends javax.swing.JFrame {
                 NoActionPerformed(evt);
             }
         });
-        jPanel1.add(No, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 60, -1));
+        jPanel1.add(No, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 270, 60, -1));
 
         Si.setBackground(new java.awt.Color(241, 227, 165));
         Si.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
@@ -175,7 +179,7 @@ public class EleccionUsuario extends javax.swing.JFrame {
                 SiActionPerformed(evt);
             }
         });
-        jPanel1.add(Si, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 60, -1));
+        jPanel1.add(Si, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, 60, -1));
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 51));
         jPanel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -190,15 +194,6 @@ public class EleccionUsuario extends javax.swing.JFrame {
         });
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Return.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/volver_1.png"))); // NOI18N
-        Return.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Return.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ReturnMouseClicked(evt);
-            }
-        });
-        jPanel2.add(Return, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
-
         Minimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/menos.png"))); // NOI18N
         Minimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Minimizar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -211,7 +206,16 @@ public class EleccionUsuario extends javax.swing.JFrame {
         });
         jPanel2.add(Minimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 500, 50));
+        Return.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/volver_1.png"))); // NOI18N
+        Return.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Return.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ReturnMouseClicked(evt);
+            }
+        });
+        jPanel2.add(Return, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 40, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 620, 50));
 
         Sableye.setBackground(new java.awt.Color(255, 204, 51));
         Sableye.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Sableye_NB.gif"))); // NOI18N
@@ -222,13 +226,19 @@ public class EleccionUsuario extends javax.swing.JFrame {
                 SableyeActionPerformed(evt);
             }
         });
-        jPanel1.add(Sableye, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, -1, -1));
+        jPanel1.add(Sableye, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, -1, -1));
+
+        ComboMusica.setBackground(new java.awt.Color(241, 227, 165));
+        ComboMusica.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "AccumulaTown", "BattleFrontier", "SwordAndShield" }));
+        ComboMusica.setToolTipText("");
+        ComboMusica.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(ComboMusica, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 300, 150, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -253,7 +263,13 @@ public class EleccionUsuario extends javax.swing.JFrame {
         ReproductorMusica.reproducirAudio("/Audio/A.wav");
 
         //Funcion para leer archivo
-        LeerYEscribir.Leer("/Texto/Readme.txt");
+        if (ComboMusica.getSelectedItem().equals("Seleccionar")) {
+            JOptionPane.showMessageDialog(null, "Indica una cancion en la lista de la derecha");
+        } else {
+            ReproductorMusica.detenerReproduccionMusica();
+            ReproductorMusica.iniciarReproduccionMusica("/Musica/" + ComboMusica.getSelectedItem() + ".wav");
+            System.out.println("/Musica/" + ComboMusica.getSelectedItem() + ".wav");
+        }
     }//GEN-LAST:event_ClickMeActionPerformed
 
     private void ValorarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ValorarActionPerformed
@@ -269,7 +285,7 @@ public class EleccionUsuario extends javax.swing.JFrame {
         ReproductorMusica.reproducirAudio("/Audio/A.wav");
 
         //Funcion para leer archivo
-        LeerYEscribir.Leer("/Texto/Nuevo.txt");
+        LeerYEscribir.Leer("/Nuevo.txt");
     }//GEN-LAST:event_LeerActionPerformed
 
     private void GengarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GengarActionPerformed
@@ -310,7 +326,7 @@ public class EleccionUsuario extends javax.swing.JFrame {
         ReproductorMusica.reproducirAudio("/Audio/A.wav");
 
         //Funcion para leer archivo
-        LeerYEscribir.Leer("/Texto/Si.txt");
+        LeerYEscribir.Leer("/Si.txt");
     }//GEN-LAST:event_SiActionPerformed
 
     private void ReturnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReturnMouseClicked
@@ -360,6 +376,7 @@ public class EleccionUsuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BuscarEditar;
     public javax.swing.JButton ClickMe;
+    private javax.swing.JComboBox<String> ComboMusica;
     private javax.swing.JButton Gengar;
     private javax.swing.JLabel Label1;
     private javax.swing.JLabel Label2;

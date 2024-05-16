@@ -19,7 +19,6 @@ public class Conexion {
 
     // Método para obtener una conexión a la base de datos
     public static Connection getConnection() {
-        System.out.println(url);
         try {
             // Cargar el driver de la base de datos
             Class.forName(driver);

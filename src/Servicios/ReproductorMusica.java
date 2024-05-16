@@ -13,14 +13,14 @@ public class ReproductorMusica {
 
     public static Clip clip;
 
-    public static void iniciarReproduccionMusica() {
+    public static void iniciarReproduccionMusica(String ruta) {
         // Se inicia un nuevo hilo para reproducir la música
         Thread hiloMusica = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
                     // Cargar el archivo de música desde el directorio de recursos
-                    InputStream inputStream = ReproductorMusica.class.getResourceAsStream("/Musica/AccumulaTown.wav");
+                    InputStream inputStream = ReproductorMusica.class.getResourceAsStream(ruta);
                     // Si el archivo de música no se encuentra, lanzar una excepción FileNotFoundException
                     if (inputStream == null) {
                         throw new FileNotFoundException("Archivo de música no encontrado");

@@ -12,6 +12,7 @@ import javax.swing.SwingUtilities;
 public class Registro extends javax.swing.JFrame {
 
     //Instancias
+    private final ControladorUsuario controladorU;
     int xMouse, yMouse;
     public Usuario u;
     private Login login;
@@ -21,6 +22,8 @@ public class Registro extends javax.swing.JFrame {
 
         //Inicia la ventana en el centro
         setLocationRelativeTo(null);
+        
+        controladorU = new ControladorUsuario();
     }
 
     @SuppressWarnings("unchecked")
@@ -270,7 +273,7 @@ public class Registro extends javax.swing.JFrame {
 
             //Creamos el objeto y llamamos al metodo para insertar
             Usuario usuario = new Usuario(nombre, apellido, contraseña, telefono);
-            new ControladorUsuario().CrearUsuario(usuario);
+            controladorU.CrearUsuario(usuario);
         }
     }//GEN-LAST:event_FinalizarActionPerformed
 

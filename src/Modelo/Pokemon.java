@@ -2,17 +2,17 @@ package Modelo;
 
 public class Pokemon {
 
-    String nombre;
-    int num_pok;
-    String numero_pok;
-    int genero_id;
-    String genero;
-    int tipo1_id;
-    String tipo1;
-    int tipo2_id;
-    String tipo2;
-    int naturaleza_id;
-    String naturaleza;
+    private String nombre;
+    private int num_pok;
+    private String numero_pok;
+    private int genero_id;
+    private String genero;
+    private int tipo1_id;
+    private String tipo1;
+    private int tipo2_id;
+    private String tipo2;
+    private int naturaleza_id;
+    private String naturaleza;
 
     public Pokemon() {
 

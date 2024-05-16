@@ -2,11 +2,11 @@ package Modelo;
 
 public class Usuario {
 
-    int id;
-    String nombre;
-    String apellido;
-    String telefono;
-    String contraseña;
+    private int id;
+    private String nombre;
+    private String apellido;
+    private String telefono;
+    private String contraseña;
 
     public Usuario() {
     }

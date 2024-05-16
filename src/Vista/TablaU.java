@@ -266,6 +266,8 @@ public class TablaU extends javax.swing.JFrame {
         //Recoge el texto de nombre y verifica si esta vacio
         if (txtId.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Debe rellenar el campo de Nombre para poder eliminar");
+        } else if (txtId.getText().equals("1")) {
+            JOptionPane.showMessageDialog(null, "Imposible de eliminar, el admin es todopoderoso");
         } else {
 
             //Igualamos las variables al texto recogido en el campo
@@ -273,13 +275,12 @@ public class TablaU extends javax.swing.JFrame {
 
             //Creamos el objeto y llamamos al metodo para eliminar
             Usuario usuario = new Usuario(ID);
-            new ControladorUsuario().EliminarUsuario(usuario);
+            controladorU.EliminarUsuario(usuario);
         }
     }//GEN-LAST:event_EliminarActionPerformed
 
     private void txtIdKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdKeyTyped
         //Tipado que impide escribir valores numericos enteros
-       
 
         //Tipado que impide escribir mas de 10 caracteres
         if (txtId.getText().length() >= 10) {

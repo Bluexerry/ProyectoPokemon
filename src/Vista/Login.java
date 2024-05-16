@@ -41,6 +41,7 @@ public class Login extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         Apagar = new javax.swing.JLabel();
         Minimizar = new javax.swing.JLabel();
+        No = new javax.swing.JButton();
 
         jLabel2.setText("jLabel2");
 
@@ -186,6 +187,18 @@ public class Login extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 50));
 
+        No.setBackground(new java.awt.Color(255, 204, 51));
+        No.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        No.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/sin-sonido.png"))); // NOI18N
+        No.setBorder(null);
+        No.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        No.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(No, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 50, -1));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 340));
 
         pack();
@@ -326,11 +339,20 @@ public class Login extends javax.swing.JFrame {
 
     }//GEN-LAST:event_MinimizarMouseEntered
 
+    private void NoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NoActionPerformed
+        //Funcion para reproducir un audio
+        ReproductorMusica.reproducirAudio("/Audio/A.wav");
+
+        //Funcion para leer archivo
+        ReproductorMusica.detenerReproduccionMusica();
+    }//GEN-LAST:event_NoActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Apagar;
     private javax.swing.JButton IconoEntrenador;
     public javax.swing.JButton InicioSesion;
     private javax.swing.JLabel Minimizar;
+    private javax.swing.JButton No;
     private javax.swing.JButton Pikachu;
     public javax.swing.JButton Registro;
     private javax.swing.JLabel jLabel2;

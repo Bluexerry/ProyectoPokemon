@@ -1,23 +1,39 @@
 package Servicios;
 
+import java.awt.BorderLayout;
+import java.awt.Desktop;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import javax.swing.JEditorPane;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
 
 public class LeerYEscribir {
 
+    public static String rutaDeArchivo() {
+        // Nombre del archivo a crear
+        Path relativePath = Paths.get("src\\Texto");
+        Path absolutePath = relativePath.toAbsolutePath();
+        System.out.println("Current relative path is: " + absolutePath.toString());
+        return absolutePath.toString();
+    }
+
     public static void Leer(String ruta) {
-        // Nombre del archivo dentro del paquete "Texto"
 
         try {
-            // Obtiene la URL del archivo desde el classpath. GetResource es un recurso relativo a la ubicacion de la clase. 
-            URL url = LeerYEscribir.class.getResource(ruta);
+            String rutaCompleta = rutaDeArchivo() + ruta;
+
             //Verifica que la ruta no sea nula
-            if (url == null) {
+            if (rutaCompleta == null) {
                 // Si no se encuentra el archivo, muestra un mensaje de advertencia y termina el método
                 JOptionPane.showMessageDialog(null, "No se pudo encontrar el archivo");
                 System.out.println("No se pudo encontrar el archivo.");
@@ -25,7 +41,7 @@ public class LeerYEscribir {
             }
 
             // Abre el archivo en modo lectura
-            BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
+            BufferedReader br = new BufferedReader(new FileReader(rutaCompleta));
 
             // Lee el archivo línea por línea y lo concatena en un StringBuilder con saltos de línea
             StringBuilder textoConSaltos = new StringBuilder();
@@ -44,16 +60,12 @@ public class LeerYEscribir {
             JOptionPane.showMessageDialog(null, "<html><body><p style='width: 300px;'>" + textoConSaltos.toString() + "</p></body></html>");
         } catch (IOException e) {
             // Si ocurre un error al leer el archivo, muestra un mensaje de error con la excepción
-            JOptionPane.showMessageDialog(null, "Error al leer el archivo: " + e);
+            JOptionPane.showMessageDialog(null, "Error al leer el archivo");
             System.out.println("Error al leer el archivo: " + e.getMessage());
         }
     }
 
     public static void Escribir() {
-        // Ruta completa del directorio "Texto"
-        String directorioTexto = "C:/Users/Jesús/Documents/NetBeansProjects/Proyecto_Pokemon/ProyectoP/src/Texto";
-        // Nombre del archivo a crear
-        String archivo = "Nuevo.txt";
 
         try {
             // Solicita al usuario que escriba en el archivo
@@ -61,7 +73,7 @@ public class LeerYEscribir {
 
             if (texto != null) {
                 // Crea el archivo en el directorio "Texto" en base al directorioTexto, luego una llamada al metodo System para obtener un separador de directorios
-                String rutaCompleta = directorioTexto + System.getProperty("file.separator") + archivo;
+                String rutaCompleta = rutaDeArchivo() + "/Nuevo.txt";
 
                 // Se crea un BufferedWriter para escribir en el archivo
                 BufferedWriter writer = new BufferedWriter(new FileWriter(rutaCompleta));
@@ -84,6 +96,17 @@ public class LeerYEscribir {
             JOptionPane.showMessageDialog(null, "Error al crear el archivo: " + e);
             // También imprime el mensaje de excepción en la consola
             System.out.println("Error al escribir en el archivo: " + e.getMessage());
+        }
+    }
+
+    public static void LeerUrl(String url) {
+        if (Desktop.isDesktopSupported()) {
+            Desktop desktop = Desktop.getDesktop();
+            try {
+                desktop.browse(new URI(url));
+            } catch (IOException | URISyntaxException e) {
+                System.out.println("Error de URL: " + e);
+            }
         }
     }
 }
