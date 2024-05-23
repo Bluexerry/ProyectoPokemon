@@ -54,6 +54,7 @@
               <Font name="Verdana" size="12" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Buscar/Editar Pokemon"/>
+            <Property name="toolTipText" type="java.lang.String" value="Crea, edita o elimina Pokemon de la BBDD"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BuscarEditarActionPerformed"/>

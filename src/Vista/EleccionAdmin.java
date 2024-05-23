@@ -48,6 +48,7 @@ public class EleccionAdmin extends javax.swing.JFrame {
         DatosUsuarios.setBackground(new java.awt.Color(241, 227, 165));
         DatosUsuarios.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         DatosUsuarios.setText("Buscar Usuarios");
+        DatosUsuarios.setToolTipText("Muestra los usuarios disponibles en el sistema y permite eliminarlos.");
         DatosUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DatosUsuariosActionPerformed(evt);
@@ -58,6 +59,7 @@ public class EleccionAdmin extends javax.swing.JFrame {
         BuscarEditar.setBackground(new java.awt.Color(241, 227, 165));
         BuscarEditar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         BuscarEditar.setText("Buscar/Editar Pokemon");
+        BuscarEditar.setToolTipText("Crea, edita o elimina Pokemon de la BBDD");
         BuscarEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BuscarEditarActionPerformed(evt);

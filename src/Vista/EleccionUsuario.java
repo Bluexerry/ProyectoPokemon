@@ -3,8 +3,6 @@ package Vista;
 import Servicios.LeerYEscribir;
 import Servicios.ReproductorMusica;
 import java.awt.Window;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
@@ -56,6 +54,7 @@ public class EleccionUsuario extends javax.swing.JFrame {
         BuscarEditar.setBackground(new java.awt.Color(241, 227, 165));
         BuscarEditar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         BuscarEditar.setText("Buscar/Editar Pokemon");
+        BuscarEditar.setToolTipText("Crea, edita o elimina Pokemon de la BBDD");
         BuscarEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BuscarEditarActionPerformed(evt);

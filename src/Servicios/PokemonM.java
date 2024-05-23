@@ -20,7 +20,7 @@ public class PokemonM {
                 + " INNER JOIN genero g ON p.Genero_id = g.ID"
                 + " INNER JOIN tipo t1 ON p.Tipo1_id = t1.ID"
                 + " LEFT JOIN tipo t2 ON p.Tipo2_id = t2.ID"
-                + " INNER JOIN naturaleza n ON p.Naturaleza_id = n.ID;";
+                + " INNER JOIN naturaleza n ON p.Naturaleza_id = n.ID ORDER BY p.Num_Pok;";
         try {
 
             //Llamamos la conexion de consultas para obtener un resultado

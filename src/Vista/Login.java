@@ -4,8 +4,12 @@ import Controlador.ControladorUsuario;
 import Modelo.Usuario;
 import Servicios.ReproductorMusica;
 import java.awt.Window;
+import java.awt.event.ActionEvent;
+import javax.swing.AbstractAction;
+import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 import javax.swing.JFrame;
+import javax.swing.KeyStroke;
 import javax.swing.SwingUtilities;
 
 public class Login extends javax.swing.JFrame {
@@ -21,6 +25,15 @@ public class Login extends javax.swing.JFrame {
 
         //Inicia la ventana en el centros
         setLocationRelativeTo(null);
+        
+        // Mapeo de la tecla Enter a la acción del botón InicioSesion
+        txtContraseña.getInputMap(JComponent.WHEN_FOCUSED).put(KeyStroke.getKeyStroke("ENTER"), "pressButton");
+        txtContraseña.getActionMap().put("pressButton", new AbstractAction() {
+            
+            public void actionPerformed(ActionEvent e) {
+                InicioSesion.doClick();
+            }
+        });
     }
 
     @SuppressWarnings("unchecked")

@@ -114,6 +114,7 @@ public class Registro extends javax.swing.JFrame {
         Finalizar.setBackground(new java.awt.Color(241, 227, 165));
         Finalizar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         Finalizar.setText("Registrar");
+        Finalizar.setToolTipText("Registrar un nuevo usuario en el sistema. Debe rellenar todos los campos de manera correcta.");
         Finalizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Finalizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

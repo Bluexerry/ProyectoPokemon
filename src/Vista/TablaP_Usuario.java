@@ -12,6 +12,9 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import Modelo.Genero;
+import Modelo.Naturaleza;
+import Modelo.Tipo;
 
 public class TablaP_Usuario extends javax.swing.JFrame {
 
@@ -49,23 +52,21 @@ public class TablaP_Usuario extends javax.swing.JFrame {
         txtId = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
-        Return = new javax.swing.JLabel();
-        Minimizar = new javax.swing.JLabel();
-        Genero = new javax.swing.JButton();
-        Nat = new javax.swing.JButton();
-        Tipo = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        Label2 = new javax.swing.JLabel();
         Generotxt = new javax.swing.JComboBox<>();
         Tipo1txt = new javax.swing.JComboBox<>();
         Tipo2txt = new javax.swing.JComboBox<>();
         Naturalezatxt = new javax.swing.JComboBox<>();
         URLlabel = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 51));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tabla.setBackground(new java.awt.Color(241, 227, 165));
         tabla.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -80,23 +81,31 @@ public class TablaP_Usuario extends javax.swing.JFrame {
         tabla.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jScrollPane1.setViewportView(tabla);
 
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(302, 6, 583, 520));
+
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel1.setText("Pokedex:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 62, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel2.setText("Nombre:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 96, 66, -1));
 
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel3.setText("Genero:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 138, 66, -1));
 
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel4.setText("Tipo 1:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 178, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel5.setText("Tipo 2:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 220, 57, -1));
 
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel6.setText("Naturaleza:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 258, 91, 29));
 
         btnGuardar.setBackground(new java.awt.Color(241, 227, 165));
         btnGuardar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
@@ -108,6 +117,7 @@ public class TablaP_Usuario extends javax.swing.JFrame {
                 btnGuardarActionPerformed(evt);
             }
         });
+        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 258, -1));
 
         btnListar.setBackground(new java.awt.Color(241, 227, 165));
         btnListar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
@@ -119,6 +129,7 @@ public class TablaP_Usuario extends javax.swing.JFrame {
                 btnListarActionPerformed(evt);
             }
         });
+        jPanel1.add(btnListar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 258, -1));
 
         btnEditar.setBackground(new java.awt.Color(241, 227, 165));
         btnEditar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
@@ -130,17 +141,19 @@ public class TablaP_Usuario extends javax.swing.JFrame {
                 btnEditarActionPerformed(evt);
             }
         });
+        jPanel1.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 258, -1));
 
         btnEliminar.setBackground(new java.awt.Color(241, 227, 165));
         btnEliminar.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         btnEliminar.setText("Eliminar");
-        btnEliminar.setToolTipText("Elimina un cuadro de datos en la BBDD,  debe denominar el nombre para poder identificar el Pokemon.");
+        btnEliminar.setToolTipText("Eliminar un cuadro de datos en la BBDD,  debe denominar el nombre para poder identificar el Pokemon.");
         btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarActionPerformed(evt);
             }
         });
+        jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 258, -1));
 
         txtId.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -157,6 +170,7 @@ public class TablaP_Usuario extends javax.swing.JFrame {
                 txtIdKeyTyped(evt);
             }
         });
+        jPanel1.add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 62, 180, -1));
 
         txtNombre.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -173,6 +187,7 @@ public class TablaP_Usuario extends javax.swing.JFrame {
                 txtNombreKeyTyped(evt);
             }
         });
+        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 96, 180, -1));
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 51));
         jPanel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -187,83 +202,64 @@ public class TablaP_Usuario extends javax.swing.JFrame {
         });
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Return.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/volver_1.png"))); // NOI18N
-        Return.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Return.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/volver_1.png"))); // NOI18N
+        jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ReturnMouseClicked(evt);
+                jLabel10MouseClicked(evt);
             }
         });
-        jPanel2.add(Return, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        Minimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/menos.png"))); // NOI18N
-        Minimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Minimizar.addMouseListener(new java.awt.event.MouseAdapter() {
+        Label2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/menos.png"))); // NOI18N
+        Label2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Label2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                MinimizarMouseClicked(evt);
+                Label2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                MinimizarMouseEntered(evt);
+                Label2MouseEntered(evt);
             }
         });
-        jPanel2.add(Minimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
+        jPanel2.add(Label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
 
-        Genero.setBackground(new java.awt.Color(241, 227, 165));
-        Genero.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        Genero.setText("Genero");
-        Genero.setToolTipText("Haz click para ver el posible genero.");
-        Genero.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Genero.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GeneroActionPerformed(evt);
-            }
-        });
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 50));
 
-        Nat.setBackground(new java.awt.Color(241, 227, 165));
-        Nat.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        Nat.setText("Naturaleza");
-        Nat.setToolTipText("Haz click para ver la posible naturaleza.");
-        Nat.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Nat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NatActionPerformed(evt);
-            }
-        });
-
-        Tipo.setBackground(new java.awt.Color(241, 227, 165));
-        Tipo.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        Tipo.setText("Tipo");
-        Tipo.setToolTipText("Haz click para ver el numero de tipo.");
-        Tipo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Tipo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TipoActionPerformed(evt);
-            }
-        });
-
-        jLabel8.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel8.setText("   Haz click para conocer el ID necesario");
-
-        jLabel9.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel9.setText("-----------------------------------------");
-
-        Generotxt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "1", "2", "3" }));
+        Generotxt.setModel(new Servicios.GenderSelect().getGenders());
+        Generotxt.setSelectedItem(Servicios.GenderSelect.defaultGender);
         Generotxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GenerotxtActionPerformed(evt);
             }
         });
+        jPanel1.add(Generotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 135, 180, -1));
 
-        Tipo1txt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "15", "16", "17", "18" }));
+        Tipo1txt.setModel(new Servicios.TipoSelect().getTipos());
+        Tipo1txt.setSelectedItem(Servicios.TipoSelect.deaultTipo);
         Tipo1txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Tipo1txtActionPerformed(evt);
             }
         });
+        jPanel1.add(Tipo1txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 175, 180, -1));
 
-        Tipo2txt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19" }));
+        Tipo2txt.setModel(new Servicios.TipoSelect().getTipos());
+        Tipo2txt.setSelectedItem(Servicios.TipoSelect.deaultTipo);
+        Tipo2txt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Tipo2txtActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Tipo2txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 217, 180, -1));
 
-        Naturalezatxt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25" }));
+        Naturalezatxt.setModel(new Servicios.NaturalezaSelect().getNaturalezas());
+        Naturalezatxt.setSelectedItem(Servicios.NaturalezaSelect.defaultNature);
+        Naturalezatxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NaturalezatxtActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Naturalezatxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(108, 261, 180, -1));
 
         URLlabel.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         URLlabel.setForeground(new java.awt.Color(51, 51, 255));
@@ -274,154 +270,39 @@ public class TablaP_Usuario extends javax.swing.JFrame {
                 URLlabelMouseClicked(evt);
             }
         });
+        jPanel1.add(URLlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 290, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jLabel8))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(43, 43, 43)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Generotxt, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(Tipo1txt, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(Tipo2txt, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(Naturalezatxt, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel1))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(25, 25, 25))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(Tipo, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Genero)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Nat, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(btnEliminar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnGuardar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnListar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
-                                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnEditar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(12, 12, 12))
-                            .addComponent(URLlabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 583, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(311, 311, 311))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(12, 12, 12)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(17, 17, 17)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(Generotxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(Tipo1txt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(20, 20, 20)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(Tipo2txt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(19, 19, 19)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Naturalezatxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(27, 27, 27)
-                        .addComponent(jLabel8)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Tipo)
-                            .addComponent(Genero)
-                            .addComponent(Nat))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel9)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnListar)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnGuardar)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnEditar)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnEliminar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(URLlabel)
-                        .addGap(0, 6, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1)))
-                .addContainerGap())
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 530));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
+        //Funcion para reproducir un audio 
+        ReproductorMusica.reproducirAudio("/Audio/SonidoBoli.wav");
+    }//GEN-LAST:event_txtIdActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         //Funcion para reproducir un audio 
         ReproductorMusica.reproducirAudio("/Audio/A.wav");
 
+        final Genero generoSelect = (Genero) Generotxt.getSelectedItem();
+        final Tipo tipo1Select = (Tipo) Tipo1txt.getSelectedItem();
+        final Tipo tipo2Select = (Tipo) Tipo2txt.getSelectedItem();
+        final Naturaleza naturalezaSelect = (Naturaleza) Naturalezatxt.getSelectedItem();
+
         //Recoge el texto de los campos y verifica si estan vacios
-        if (txtId.getText().isBlank() || txtNombre.getText().isBlank() || Generotxt.getSelectedItem().equals("Seleccionar") || Tipo1txt.getSelectedItem().equals("Seleccionar") || Tipo2txt.getSelectedItem().equals("Seleccionar") || Naturalezatxt.getSelectedItem().equals("Seleccionar")) {
+        if (txtId.getText().isBlank() || txtNombre.getText().isBlank() || generoSelect.getNombre().equals("Seleccionar") || tipo1Select.getNombre().equals("Seleccionar") || tipo2Select.getNombre().equals("Seleccionar") || naturalezaSelect.getNombre().equals("Seleccionar")) {
             JOptionPane.showMessageDialog(null, "Debe rellenar todos los campos");
         } else {
 
             //Iguala las variables al texto recogido. Como algunas son ints necesitan un Integer.parseInt
             int num_pok = Integer.parseInt(txtId.getText());
             String nombre = txtNombre.getText();
-            int genero = Integer.parseInt(Generotxt.getSelectedItem().toString());
-            int tipo1 = Integer.parseInt(Tipo1txt.getSelectedItem().toString());
-            int tipo2 = Integer.parseInt(Tipo2txt.getSelectedItem().toString());
-            int naturaleza = Integer.parseInt(Naturalezatxt.getSelectedItem().toString());
+            int genero = generoSelect.getId();
+            int tipo1 = tipo1Select.getId();
+            int tipo2 = tipo2Select.getId();
+            int naturaleza = naturalezaSelect.getId();
 
             //Creamos el objeto y llamamos al metodo para insertar
             Pokemon pokemon = new Pokemon(nombre, num_pok, genero, tipo1, tipo2, naturaleza);
@@ -430,21 +311,21 @@ public class TablaP_Usuario extends javax.swing.JFrame {
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarActionPerformed
-        //Funcion para reproducir un audio 
+        //Funcion para reproducir un audio
         ReproductorMusica.reproducirAudio("/Audio/A.wav");
 
         //Creamos un modelo de tabla en base a nuestra tabla situada en el frame
         TableModel modelo = tabla.getModel();
         DefaultTableModel modeloTabla = (DefaultTableModel) modelo;
 
-        //Seteamos la tabla a 0 cada ves que clikcamos para ecitar sobrecargas de datos
+        //Seteamos la tabla a 0 cada ves que clikcamos para evitar sobrecargas de datos
         modeloTabla.setRowCount(0);
 
         //Creamos una lista de usuarios y llamamos al metodo
         List<Pokemon> pokemons
                 = controladorPokemon.ListarPokemon(tabla);
 
-        //Creamos un array de objetos con capacidad hasta 5
+        //Creamos un array de objetos con capacidad hasta 6
         Object[] object = new Object[6];
 
         /*Reiteramos los datos que nos devuelve la funcion con el objeto y 
@@ -466,9 +347,17 @@ public class TablaP_Usuario extends javax.swing.JFrame {
         tabla.setModel(modelo);
     }//GEN-LAST:event_btnListarActionPerformed
 
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+        //Funcion para reproducir un audio
+        ReproductorMusica.reproducirAudio("/Audio/SonidoBoli.wav");
+    }//GEN-LAST:event_txtNombreActionPerformed
+
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
         //Funcion para reproducir un audio
         ReproductorMusica.reproducirAudio("/Audio/A.wav");
+
+        final Genero generoSelect = (Genero) Generotxt.getSelectedItem();
+        final Naturaleza naturalezaSelect = (Naturaleza) Naturalezatxt.getSelectedItem();
 
         //Recoge el texto de los campos y verifica si estan vacios
         if (txtNombre.getText().isBlank() || Generotxt.getSelectedItem().equals("Seleccionar") || Naturalezatxt.getSelectedItem().equals("Seleccionar")) {
@@ -477,8 +366,8 @@ public class TablaP_Usuario extends javax.swing.JFrame {
 
             //Iguala las variables al texto recogido. Como algunas son ints necesitan un Integer.parseInt
             String nombre = txtNombre.getText();
-            int genero = Integer.parseInt(Generotxt.getSelectedItem().toString());
-            int naturaleza = Integer.parseInt(Naturalezatxt.getSelectedItem().toString());
+            int genero = generoSelect.getId();
+            int naturaleza = naturalezaSelect.getId();
 
             //Creamos el objeto y llamamos al metodo para setear
             Pokemon pokemon = new Pokemon(nombre, genero, naturaleza);
@@ -504,15 +393,28 @@ public class TablaP_Usuario extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
+    private void jPanel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MousePressed
+        //Las variables mencionadas se igualan a la posicion x e y
+        xMouse = evt.getX();
+        yMouse = evt.getY();
+    }//GEN-LAST:event_jPanel2MousePressed
+
+    private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseDragged
+        //Variables que permiten el movimiento de la ventana mediante obtencion de la posicion x e y de esta
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x - xMouse, y - yMouse);
+    }//GEN-LAST:event_jPanel2MouseDragged
+
     private void txtIdMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtIdMouseClicked
         //Funcion para reproducir un audio
         ReproductorMusica.reproducirAudio("/Audio/SonidoBoli.wav");
     }//GEN-LAST:event_txtIdMouseClicked
 
-    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
+    private void txtNombreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombreMouseClicked
         //Funcion para reproducir un audio
         ReproductorMusica.reproducirAudio("/Audio/SonidoBoli.wav");
-    }//GEN-LAST:event_txtIdActionPerformed
+    }//GEN-LAST:event_txtNombreMouseClicked
 
     private void txtIdKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdKeyTyped
         //Tipado que impide escribir valores numericos enteros
@@ -529,86 +431,41 @@ public class TablaP_Usuario extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtIdKeyTyped
 
-    private void txtNombreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombreMouseClicked
+    private void GenerotxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GenerotxtActionPerformed
         //Funcion para reproducir un audio
-        ReproductorMusica.reproducirAudio("/Audio/SonidoBoli.wav");
-    }//GEN-LAST:event_txtNombreMouseClicked
+        ReproductorMusica.reproducirAudio("/Audio/A.wav");
+    }//GEN-LAST:event_GenerotxtActionPerformed
 
-    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+    private void Tipo1txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tipo1txtActionPerformed
         //Funcion para reproducir un audio
-        ReproductorMusica.reproducirAudio("/Audio/SonidoBoli.wav");
-    }//GEN-LAST:event_txtNombreActionPerformed
+        ReproductorMusica.reproducirAudio("/Audio/A.wav");
+    }//GEN-LAST:event_Tipo1txtActionPerformed
 
-    private void ReturnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReturnMouseClicked
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
         //Funcion para reproducir un audio
         ReproductorMusica.reproducirAudio("/Audio/A.wav");
 
-        //Set de la visualizacion de la vantana de EleccionUsuario y cierre de esta
-        EleccionUsuario eleccionUsuario = new EleccionUsuario();
-        eleccionUsuario.setVisible(true);
+        //Set de la visualizacion de la vantana de EleccionAdmin y cierre de esta
+        EleccionUsuario eleccion = new EleccionUsuario();
+        eleccion.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_ReturnMouseClicked
+    }//GEN-LAST:event_jLabel10MouseClicked
 
-    private void MinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MinimizarMouseClicked
+    private void Label2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Label2MouseClicked
         //Funcion para reproducir un audio
         ReproductorMusica.reproducirAudio("/Audio/A.wav");
 
         // Obtiene la ventana padre del JLabel
-        Window window = SwingUtilities.getWindowAncestor(Minimizar);
+        Window window = SwingUtilities.getWindowAncestor(Label2);
         // Verifica si la ventana es un JFrame y la minimiza
         if (window instanceof JFrame) {
             ((JFrame) window).setState(JFrame.ICONIFIED);
         }
-    }//GEN-LAST:event_MinimizarMouseClicked
+    }//GEN-LAST:event_Label2MouseClicked
 
-    private void MinimizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MinimizarMouseEntered
+    private void Label2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Label2MouseEntered
 
-    }//GEN-LAST:event_MinimizarMouseEntered
-
-    private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseDragged
-        //Variables que permiten el movimiento de la ventana mediante obtencion de la posicion x e y de esta
-        int x = evt.getXOnScreen();
-        int y = evt.getYOnScreen();
-        this.setLocation(x - xMouse, y - yMouse);
-    }//GEN-LAST:event_jPanel2MouseDragged
-
-    private void jPanel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MousePressed
-        //Las variables mencionadas se igualan a la posicion x e y
-        xMouse = evt.getX();
-        yMouse = evt.getY();
-    }//GEN-LAST:event_jPanel2MousePressed
-
-    private void GeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GeneroActionPerformed
-        //Funcion para reproducir un audio
-        ReproductorMusica.reproducirAudio("/Audio/A.wav");
-
-        //Funcion para leer archivo
-        LeerYEscribir.Leer("/Genero.txt");
-    }//GEN-LAST:event_GeneroActionPerformed
-
-    private void NatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NatActionPerformed
-        //Funcion para reproducir un audio
-        ReproductorMusica.reproducirAudio("/Audio/A.wav");
-
-        //Funcion para leer archivo
-        LeerYEscribir.Leer("/Naturaleza.txt");
-    }//GEN-LAST:event_NatActionPerformed
-
-    private void TipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TipoActionPerformed
-        //Funcion para reproducir un audio
-        ReproductorMusica.reproducirAudio("/Audio/A.wav");
-
-        //Funcion para leer archivo
-        LeerYEscribir.Leer("/Tipo.txt");
-    }//GEN-LAST:event_TipoActionPerformed
-
-    private void GenerotxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GenerotxtActionPerformed
-
-    }//GEN-LAST:event_GenerotxtActionPerformed
-
-    private void Tipo1txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tipo1txtActionPerformed
-
-    }//GEN-LAST:event_Tipo1txtActionPerformed
+    }//GEN-LAST:event_Label2MouseEntered
 
     private void txtNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyTyped
         //Tipado que impide escribir valores numericos enteros
@@ -624,21 +481,27 @@ public class TablaP_Usuario extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNombreKeyTyped
 
     private void URLlabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_URLlabelMouseClicked
-        //Funcion para reproducir un audio 
+        //Funcion para reproducir un audio
         ReproductorMusica.reproducirAudio("/Audio/A.wav");
 
         //Funcion para abrir una URL
         LeerYEscribir.LeerUrl(URLlabel.getText());
     }//GEN-LAST:event_URLlabelMouseClicked
 
+    private void Tipo2txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tipo2txtActionPerformed
+        //Funcion para reproducir un audio
+        ReproductorMusica.reproducirAudio("/Audio/A.wav");
+    }//GEN-LAST:event_Tipo2txtActionPerformed
+
+    private void NaturalezatxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NaturalezatxtActionPerformed
+        //Funcion para reproducir un audio
+        ReproductorMusica.reproducirAudio("/Audio/A.wav");
+    }//GEN-LAST:event_NaturalezatxtActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton Genero;
     private javax.swing.JComboBox<String> Generotxt;
-    private javax.swing.JLabel Minimizar;
-    public javax.swing.JButton Nat;
+    private javax.swing.JLabel Label2;
     private javax.swing.JComboBox<String> Naturalezatxt;
-    private javax.swing.JLabel Return;
-    public javax.swing.JButton Tipo;
     private javax.swing.JComboBox<String> Tipo1txt;
     private javax.swing.JComboBox<String> Tipo2txt;
     private javax.swing.JLabel URLlabel;
@@ -647,13 +510,12 @@ public class TablaP_Usuario extends javax.swing.JFrame {
     public javax.swing.JButton btnGuardar;
     public javax.swing.JButton btnListar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

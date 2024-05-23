@@ -1,6 +1,5 @@
 package Servicios;
 
-import java.awt.BorderLayout;
 import java.awt.Desktop;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -9,13 +8,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import javax.swing.JEditorPane;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.JScrollPane;
 
 public class LeerYEscribir {
 
@@ -23,7 +18,6 @@ public class LeerYEscribir {
         // Nombre del archivo a crear
         Path relativePath = Paths.get("src\\Texto");
         Path absolutePath = relativePath.toAbsolutePath();
-        System.out.println("Current relative path is: " + absolutePath.toString());
         return absolutePath.toString();
     }
 
@@ -83,6 +77,7 @@ public class LeerYEscribir {
 
                 // Agrega una nueva línea después de la escritura
                 writer.newLine();
+                
                 // Cierra el BufferedWriter
                 writer.close();
 
